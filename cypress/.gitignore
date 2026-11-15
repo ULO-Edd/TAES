@@ -1,0 +1,21 @@
+node_modules
+package-lock.json
+.env
+.vscode
+.idea
+.DS_Store
+
+# Cypress outputs (any test folder name)
+**/videos/
+**/screenshots/
+**/results/
+**/reports/
+**/downloads/
+**/cucumber-json/
+cucumber-report*
+
+# Local secrets / test data (copy the *.example.json files instead)
+cypress.env.json
+**/fixtures/sql.sql
+**/fixtures/.restore-temp.sql
+**/fixtures/valid_creds.json

@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^15.6.0"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "report:generate": "cross-env NO_COLOR=1 cypress run --browser firefox && node cypress/cucumber-html-report.js"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-cypress": "^5.2.0",
+    "multiple-cucumber-html-reporter": "^3.6.3"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "outputFolder": "cypress/cucumber-json/report.json"
+    },
+    "html": {
+      "enabled": true,
+      "outputFolder": "cypress/results/report.html"
+    }
+  }
+}
